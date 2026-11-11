@@ -108,6 +108,19 @@
         <a href="index.html">home</a>
 
     </div>
+    <!-- The invisible audio element -->
+<audio id="bg-music" loop>
+  <source src="your-audio-file.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // Plays the music as soon as the user clicks anywhere on the page
+  window.addEventListener('click', () => {
+    const audio = document.getElementById('bg-music');
+    audio.play();
+  }, { once: true }); // { once: true } ensures this only triggers on the first click
+</script>
+
 
     <!-- Background -->
     <div class="background">
